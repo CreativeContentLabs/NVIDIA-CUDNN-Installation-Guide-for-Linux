@@ -2,6 +2,8 @@
 
 본 저장소는 CUDNN을 설치하기 위한 과정을 안내하기 위한 것입니다.
 
+*설치 과정은 CUDA가 이미 설치 된 것을 전제로 진행됩니다.
+
 > CUDNN(NVIDIA CUDA Deep Neural Network)는 연구실 워크스테이션에서 수행하는 머신러닝 실험 환경에서 의존성으로 사용됩니다.
 
 
@@ -26,7 +28,7 @@ $ sudo ./install.sh
 
 ### 설치 파일 다운로드 URL
 
-해당 URL은 [NVIDIA 개발자 사이트](https://developer.nvidia.com/rdp/cudnn-download)에서 다운 받을 수 있는 설치 파일의 URL 경로입니다.
+`download_url`은 [NVIDIA 개발자 사이트](https://developer.nvidia.com/rdp/cudnn-download)에서 다운 받을 수 있는 설치 파일의 URL 경로입니다.
 
 <img width="1259" alt="image" src="https://github.com/CreativeContentLabs/NVIDIA-CUDNN-Installer-for-Linux/assets/19310326/193f6dc2-4d94-4f73-9318-c5ac9a433db5">
 
@@ -41,6 +43,8 @@ https://developer.download.nvidia.com/compute/cudnn/secure/8.9.6/local_installer
 
 본 연구실 워크스테이션은 Unix 기반의 운영체제를 사용하므로, `uname -a` 명령을 통해 시스템 정보를 획득할 수 있습니다.
 
+시스템에 설치된 CUDA의 버전을 확인하고 싶다면 `nvcc --version` 명령을 사용하십시오.
+
 시스템에 적절한 설치 파일의 URL 경로를 사용하면 됩니다.
 
 ```shell
@@ -49,6 +53,13 @@ Linux
 
 $ uname -a
 Linux <username> 5.15.0-84-generic #93~20.04.1-Ubuntu SMP Wed Sep 6 16:15:40 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+
+$ nvcc --version
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2020 NVIDIA Corporation
+Built on Mon_Nov_30_19:08:53_PST_2020
+Cuda compilation tools, release 11.2, V11.2.67
+Build cuda_11.2.r11.2/compiler.29373293_0
 ```
 
-(예시) 워크스테이션은 x86_x64 아키텍쳐를 사용하므로, `CUDNN 11`중에서`cudnn-linux-x86_64-8.9.6.50_cuda11-archive.tar.xz`를 사용할 수 있습니다.
+(예시) 워크스테이션은 Cuda 11버전을 Linux x86_x64 아키텍쳐에서 사용하고 있으므로, `cudnn-linux-x86_64-8.9.6.50_cuda11-archive.tar.xz`를 사용할 수 있습니다.
