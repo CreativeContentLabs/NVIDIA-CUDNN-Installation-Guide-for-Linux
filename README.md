@@ -11,6 +11,19 @@ https://github.com/CreativeContentLabs/NVIDIA-CUDNN-Installer-for-Linux/blob/d2b
 
 `install.sh`의 상단에 있는 셸 변수 `download_url`에 적절한 URL을 대입해주어야 합니다.
 
+적절한 설치 파일 경로를 대입해 주었다면, 셸 스크립트를 실행하여 설치를 수행합니다.
+
+```shell
+$ sudo ./install.sh
+```
+
+만약 위 명령에서 Permission denied 오류가 나타난다면, 다음의 명령을 통해 실행 권한을 부여한 뒤 재시도합니다.
+```shell
+$ chmod +x ./install.sh # x(execute:실행) 권한 부여
+
+$ sudo ./install.sh
+```
+
 ### 설치 파일 다운로드 URL
 
 해당 URL은 [NVIDIA 개발자 사이트](https://developer.nvidia.com/rdp/cudnn-download)에서 다운 받을 수 있는 설치 파일의 URL 경로입니다.
