@@ -9,7 +9,7 @@
 
 ## 설치 방법
 
-https://github.com/CreativeContentLabs/NVIDIA-CUDNN-Installer-for-Linux/blob/d2b85f00ee7315bcb4e40793a172a47b10e66d82/install.sh#L1-L11
+https://github.com/CreativeContentLabs/NVIDIA-CUDNN-Installation-Guide-for-Linux/blob/1281eec855ebbb96fe4e14fad4ed2d709605a6b0/install.sh#L1-L11
 
 `install.sh`의 상단에 있는 셸 변수 `download_url`에 적절한 URL을 대입해주어야 합니다.
 
